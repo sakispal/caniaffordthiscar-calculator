@@ -1,0 +1,356 @@
+
+:root{
+    /*SET PALETTE TONES*/
+    --color-light-blue : #67ffd1;
+    --color-purple : #9c78ca;
+    --color-dark-blue : #121039;
+    --color-white : #f4f4f4;
+    /*SET FONTS*/
+    --quicksand : "Quicksand", Arial, Tahoma, sans-serif;
+    --roboto : ;
+}
+
+/*Style the logo*/
+.logo{
+    height: auto;
+    padding-top: 2px;
+}
+
+@media only screen and (max-width: 901px) {
+    .logo {
+        max-width: 70%;
+    }
+}
+
+/*<--------------------------------BEGINNING OF FORM CODE--------------------------------->*/
+select{
+    margin-bottom :10px;
+    display: inline;
+}
+
+
+
+label{
+    display: inline;
+    margin-bottom: 0px;
+}
+
+/*STYLE THE LETTERS OF THE MAKE, MODEL DROPDOWN after they have been added*/
+.toggle-dropdown {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.header-form-heading-top {
+    padding-top: 10px;
+}
+/*.note-text {
+    color: black;
+    font-size: 13px;
+    padding: 10px 0 15px 0;
+}*/
+
+/*Make the form stay in the middle*/
+.center-col{
+    margin: auto;
+    /*By removing this, we can make the form float to the left*/
+    float: none;
+}
+
+.header-contact-form select,
+.header-contact-form input {
+    color: var(--color-dark-blue);
+	font-size:14px;
+	font-weight:400;
+
+    /*Make the inputs smaller instead of gigantic*/
+    height: 40px;
+    background: transparent;
+    border: 0;
+	letter-spacing:1px;
+    opacity: 1;
+    -moz-appearance: none;
+    /* Firefox */
+    
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+}
+.form-control {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) inset !important;
+	border-radius:0;
+	font-size:13px;
+}
+
+.header-contact-form select,
+.header-contact-form input {
+    border-bottom: 1px solid #999999;
+}
+
+.contact-div label {
+    /*Here is the color for the labels*/
+    font-family : var(--quicksand);
+    color: var(--color-dark-blue);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header-contact-form::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.4;
+}
+.header-contact-form::-moz-placeholder {
+    /* Firefox 19+ */
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.4;
+}
+.header-contact-form:-ms-input-placeholder {
+    /* IE 10+ */
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.header-contact-form:-moz-placeholder {
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.header-contact-bg {
+    /*Main form background color*/
+    background-color: var(--color-white);
+}
+.header-contact-bg-pad {
+    /*Essentially changes the distance between dropdowns/inputs.*/
+    padding: 10px 15px 0 15px;
+}
+.header-form-heading-bg {
+    background-color: var(--color-light-blue);
+    padding: 4px 15px 4px 15px;
+}
+
+/*Style the text at the top of the form*/
+#form-title{
+    color: var(--color-dark-blue);
+    margin: auto;
+    padding : 15px 0 15px 0;
+}
+.form-control:focus {
+    border-color: #66afe9 !important;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 rgba(102, 175, 233, 0);
+    outline: 0 none;
+    color : var(--color-dark-blue) !important;
+}
+
+.form-text {
+    height: 20px;
+    font-size : 15px !important;
+}
+
+.header-form-text-bottom {
+    padding-bottom: 20px;
+}
+.form-div {
+    position: relative;
+}
+
+.submit-btn {
+    background-color: var(--color-light-blue) !important;
+    border: 0 !important;
+    color: black !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 0 !important;
+    text-transform: uppercase !important;
+    transition: 300ms ease-in !important;
+    width: 100%;
+    height: 60px !important;
+}
+
+/*MAKE SURE THAT THE FORM SHOWS UP FIRST ON MOBILE*/
+
+@media only screen and (max-width: 991px) {
+.header-form-bgimage-1 .row {
+        display:flex;
+        display:-webkit-flex;
+        flex-direction:column;
+    }
+
+    .header-form-bgimage-1 .col-md-7 {
+        order:2;
+    }
+    .header-form-bgimage-1 .col-md-5 {
+        order:1;
+        margin-bottom:30px;
+    }   
+} 
+
+/*<--------------------------------END OF FORM CODE--------------------------------->*/
+
+/*Style the "CAR AFFORDABILITY CALCULATOR" right after the form*/
+@media only screen and (max-width: 901px) {
+    #h2-title{
+        padding-top: 20px;
+    }
+}
+
+
+/*Style the icons required for how it works*/
+.explanation-icons{
+    background-size: 70px 60px;
+    background-repeat:no-repeat; 
+    background-position:left top; 
+    padding:0 0 0 80px;
+}
+
+@media only screen and (max-width: 901px) {
+    .explanation-icons{
+        background-size: 40px 30px;
+        padding: 0 0 0 50px;
+    }
+}
+
+
+/*=====================BUDGET PAGE=============================*/
+/*STYLE THE LIST BULLET POINTS*/
+
+li {
+    list-style-type: circle;
+}
+
+/*Style the table*/
+table{
+    
+    font-weight: bold;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    padding: 10px;
+}
+
+@media only screen and (max-width:580px){
+        table{
+            width: 100%;
+            height: 80%;
+            padding: 10px;
+        }
+    }
+
+table th{
+    color: var(--color-dark-blue) ;
+}
+
+/*Style the cost-data text*/
+tbody td{
+    text-align: center;
+    color: var(--color-dark-blue) !important;
+}
+
+/*WHITE BACKGROUDN FOR ROWS*/
+tbody tr{
+    background-color: #f4f4f4;
+}
+
+/*Style the head row of the table*/
+thead tr{
+    color : var(--color-dark-blue);
+}
+
+
+/*BOOTSTRAP 4 ELEMENTS*/
+.thead-light{
+    background-color: var(--color-light-blue);
+}
+
+.table-success{
+    background-color: var(--color-light-blue);
+}
+
+
+.table-dark th,
+.table-dark td,
+.table-dark thead th {
+  border-color: #32383e;
+}
+
+.table-dark.table-bordered {
+  border: 0;
+}
+
+/*Style the outcome text*/
+
+.outcome p{
+    color : var(--color-white);
+    font-weight: 500;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    padding: 0% 5% 2% 5%;
+    text-align: center;
+}
+
+@media only screen and (max-width:580px){
+        .outcome p{
+            padding-top: 40px;
+        }
+    }
+
+.to-center{
+    text-align: center; 
+    margin: auto;
+}
+
+/*STYLE THE SOCIAL MEDIA BUTTONS*/
+.sharethis-inline-share-buttons{
+    margin: auto;
+}
+/*MAKE THE SUPPORT SOCIAL AND BITCOIN BUTTONS STAY IN THE GODAMN MIDDLE*/
+.support{
+    padding-top: 5%;
+}
+
+/*STYLE THE CRYPTO-DONATION LETTERS*/
+.crypto {
+    font-weight : 700;
+    color: black;
+    text-align: center;
+}
+
+/*STYLE THE LISTINGS*/
+.listings{
+    font-weight: 1.5em;
+    font-size: 1.5em;
+}
+
+/*Special class to toggle on-off invisibility*/
+.invisible{
+    opacity: 0;
+}
+
+/*STyle the space-section in the budget page*/
+#override-space{
+    padding: 30px 0 30px 0;
+}
+
+/*Style the paypal form*/
+#paypal{
+    text-align: center;
+}
+
+
+/*STYLE THE TABLE ROWS. BOOTSRAP WAS INTERVENING, HAD TO DO IT WITH ID*/
+#table-rows{
+    padding: 1.5%;
+    font-size : 1.2em;
+    border: 1px solid black;
+}    
+
+
+/*END OF BUDGET PAGE

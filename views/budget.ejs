@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 "> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+
+    <title>Your Query - CanIAffordThisCar</title>
+    <!-- Google console tag -->
+    <meta name="google-site-verification" content="4HpXI7Bdbn3TjtDAEx6M-Rl56VWcHwsQHajvWEzgvLo" />
+    <!-- SEO TAG -->
+    <meta name = "description" content = "Submit a simple, free form and you will get the true annual or monthly cost of owning and running your dream car. All running costs taken into account.">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="">
+
+    <!-- FONTS -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Quicksand:100,300,400,400italic,500,700,700italic'>
+
+    <!-- CSS -->
+    <link rel='stylesheet' href='css/global.css'>
+    <link rel='stylesheet' href='css/structure.css'>
+    <link rel='stylesheet' href='css/pay.css'>
+    <link rel='stylesheet' href='css/custom.css'>
+
+    <!-- SCRIPT FOR SOCIAL MEDIA SHARING -->
+    <script src="//platform-api.sharethis.com/js/sharethis.js#property=5b6f010504b9a500117b0d99&product=inline-share-buttons"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106874173-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-106874173-1');
+    </script>
+
+    <!-- CONFIGURATION FOR SOCKET.IO -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+    var socket = io();
+    </script>  
+
+</head>
+
+
+<body class="color-custom style-default button-default layout-full-width no-content-padding header-transparent minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menu-line-below-80 menuo-no-borders menuo-right mobile-tb-hide mobile-side-slide mobile-mini-mr-ll tr-content be-reg-2074">
+    <div id="Wrapper">
+        <div id="Header_wrapper">
+            <header id="Header">
+                <div class="header_placeholder"></div>
+                <div id="Top_bar">
+                    <div class="container">
+                        <div class="column one">
+                            <div class="top_bar_left clearfix">
+                                <div class="logo">
+                                   <a href="/"><img class = "logo" src="https://res.cloudinary.com/dyguqwsrq/image/upload/c_scale,e_negate,w_250/v1535198353/Logos/logo.png" alt="logo"/></a>
+                                </div>
+                                <div class="menu_wrapper">
+                                    <nav id="menu">
+                                        <ul id="menu-main-menu" class="menu menu-main">
+                                            <li>
+                                                <a href="/howitworks" class=""><span>How It Works</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="/about" class=""><span>About Us</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="/privacy" class=""> <span>Privacy/Cookie Policy</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="/contact"><span>Contact</span></a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <a class="responsive-menu-toggle" href="#"><i class="icon-menu-fine"></i></a>
+                                </div>
+                            </div>
+
+                            
+                            
+                        <!--     <div class="top_bar_right">
+                                <div class="top_bar_right_wrapper">
+                                    <a href="http://bit.ly/1M6lijQ" class="button button_theme button_js action_button" target="_blank"><span class="button_label">Buy now</span></a>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!-- =====================================HEADER END======================== -->
+        <!-- START BUDGET CONTENT HERE -->
+
+        <div id="Content">
+            <div class="content_wrapper clearfix">
+                <div class="sections_group">
+                    <div class="entry-content">
+                        <div class="section mcb-section bg-cover-ultrawide" style="padding-top:160px; padding-bottom:0px; background-image:url(content/pay/images/home_pay_sectionbg1.png); background-repeat:no-repeat; background-position:center bottom">
+                            <div class="section_wrapper mcb-section-inner">
+                                <div class="wrap mcb-wrap one valign-top clearfix">
+                                    <div class="mcb-wrap-inner">
+                                        <div class="column mcb-column one column_column">
+                                            
+                                            <table class = "table">
+                                                <thead class = "thead-light">
+                                                    <tr>
+                                                        <th id = "table-rows">Expenses for a <%=car%></th>
+                                                        <th id = "table-rows" class = "to-center">Monthly cost $</th>
+                                                        <th id = "table-rows" class = "to-center">Annual cost $</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th id = "table-rows">Loan payment assuming 5 years with no down payment</th>
+                                                        <td id = "table-rows"><%=price.monthly%></td>
+                                                        <td id = "table-rows"><%=price.annual%></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th id = "table-rows">Gas cost assuming <%=mileage%> miles per year </th>
+                                                        <td id = "table-rows"><%=gas.price.monthly%></td>
+                                                        <td id = "table-rows"><%=gas.price.annual%></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th id = "table-rows">Tyre & maintenance costs</th>
+                                                        <td id = "table-rows"><%=maintenance.monthly%></td>
+                                                        <td id = "table-rows"><%=maintenance.annual%></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th id = "table-rows">State Tax</th>
+                                                        <td id = "table-rows"><%=tax.monthly%></td>
+                                                        <td id = "table-rows"><%=tax.annual%></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th id = "table-rows">Insurance</th>
+                                                        <td id = "table-rows"><%=insurance.monthly%></td>
+                                                        <td id = "table-rows"><%=insurance.annual%></td>
+                                                    </tr>
+                                                    <tr class = "table-success" id = "last">
+                                                        <th id = "table-rows">Total Cost</th>
+                                                        <td id = "table-rows"><%=outcome.totalCost.monthly%></td>
+                                                        <td id = "table-rows"><%=outcome.totalCost.annual%></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>    
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class = "section mcb-section">
+                            <div class = "section_wrapper mcb-section-inner">
+                                <div class = "wrap mcb-wrap one valign-top clearfix">
+                                    <div class = "mcb-wrap-inner">
+                                        <div class = "column mcb-column one column_column column-margin-10px">
+                                            <div class = "column_attr outcome">
+                                                <p>
+                                                    <span id = "comparisonMessage"></span> <span class = "themecolor"><%=car%></span>.
+                                                    <span id = "customerMessage"></span>
+                                                </p>
+                                                <p>If you found our service valuable you can support below:</p>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section mcb-section" style="padding-top:0px; padding-bottom:0px; background-image:url(content/pay/images/home_pay_sectionbg2.png); background-repeat:no-repeat; background-position:center">
+                            <div class="section_wrapper mcb-section-inner">
+                                <div class="wrap mcb-wrap one valign-top clearfix">
+
+                                    <div class="column mcb-column one column_divider ">
+                                        <hr class="no_line" style="margin:0 auto 20px">
+                                    </div>
+
+                                    <div class="mcb-wrap-inner">
+                                        <div class="column mcb-column one-third column_column  column-margin-20px">
+
+                                        </div>
+                                    </div>    
+
+                                    <div class="mcb-wrap-inner">
+                                        <div class="column mcb-column one-third column_column  column-margin-20px">
+                                            <div class="column_attr clearfix">
+                                                <h3 class=" to-center">Share</h3>
+                                                <p>
+                                                    <div class="sharethis-inline-share-buttons"></div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mcb-wrap-inner">
+                                        <div class="column mcb-column one-third column_column  column-margin-20px">
+
+                                        </div>
+                                    </div>  
+
+                                    <div class="column mcb-column one column_divider ">
+                                        <hr class="no_line" style="margin:0 auto 20px">
+                                    </div>
+                                
+                                </div>
+                            </div>
+
+                          
+                                        
+    
+                        </div>                     
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- WRAPPER LAST DIV -->
+    </div>    
+
+        
+<!-- Script to modify the customer-display messages -->
+<script type="text/javascript" src = "js/scripts/customerMessage.js" ></script>
+
+<% include partials/footer.ejs %>

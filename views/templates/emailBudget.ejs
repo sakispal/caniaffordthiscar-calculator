@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Thank you for your query. Here is the result for your chosen car:</p>
+
+<div class = "container-fluid budget-container" style = "width:auto;height:80%;margin:auto;padding:10px;">
+	<div class = "table-responsive">
+		<table class = "table table-dark table-bordered" style= "border:2px solid gray;font-weight:400;">
+			<thead class = "thead-light">
+				<tr>
+					<th style = "text-align:left;">Expenses for a <%=car%></th>
+					<th style ="text-align:center;">Monthly cost $</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th style = "text-align:left;">Loan payment assuming 5 years with no down payment</th>
+					<td style ="text-align:center;"><%=price%></td>
+				</tr>
+				<tr>
+					<th style = "text-align:left;">Gas cost assuming <%=mileage%> miles per year </th>
+					<td style = "text-align:center;"><%=gasPrice%></td>
+				</tr>
+				<tr>
+					<th style = "text-align:left;">Tyre & maintenance costs</th>
+					<td style ="text-align:center;"><%=maintenance%></td>
+				</tr>
+				<tr>
+					<th style = "text-align:left;">State Tax</th>
+					<td style ="text-align:center;"><%=tax%></td>
+				</tr>
+				<tr>
+					<th style = "text-align:left;">Insurance</th>
+					<td style ="text-align:center;"><%=insurance%></td>
+				</tr>
+				<tr class = "table-success" id = "last" style = "font-weight: bold;">
+					<th style = "color:#0000b3;text-align:left;">Total Cost</th>
+					<td style ="text-align:center;color: #0000b3 ;"><%=total_cost%></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class = "outcome" style = "font-size:1.2em;font-weight: 600;letter-spacing:2px;padding-bottom:1%;padding-top:1%;background-color: #ffffcc;text-align: center;">
+		<p><%=outcome%><span class = ""><%=car%></span></p>
+	</div>
+</div>
+ 
+<p>Should you want to unsubscribe from our e-mail list or not hear from us again, just reply to this message</p>
+<p>Sincerely,</p>
+<p>Admin</p>
+
+</body>
+
+</html> 

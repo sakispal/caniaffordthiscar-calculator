@@ -1,0 +1,64 @@
+{
+	"costs" : {
+		"tax" : 963, 
+	  "insurance" : 1200,
+		"maintenance" : 500,
+		"tires" : 400
+	}, 
+
+	"costs10k" : {
+		"tax" : 875, 
+	  "insurance" : 1296,
+		"maintenance" : 400,
+		"tires" : 292
+	},
+
+	"costs20k" : {
+		"tax" : 1500,
+	  "insurance" : 1404,
+		"maintenance" : 412,
+		"tires" : 504
+	},
+
+	"costs30k" : {
+		"tax" : 2125,
+	  "insurance" : 1596,
+		"maintenance" : 397,
+		"tires" : 916
+	},
+
+	"costs40k" : {
+		"tax" : 2750,
+	  "insurance" : 2232,
+		"maintenance" : 770,
+		"tires" : 976
+	},
+
+	"costs50k" :{
+		"tax" : 3400,
+	  "insurance" : 2340,
+		"maintenance" : 697,
+		"tires" : 980
+	},
+
+	"costs60k" : {
+		"tax" : 4000,
+	  "insurance" : 2424,
+		"maintenance" : 942,
+		"tires" : 1120
+	},
+
+	"costs70k" : {
+		"tax" : 4625,
+	  "insurance" : 3012,
+		"maintenance" : 912,
+		"tires" : 1160
+	},
+
+	"costs80k" : {
+		"tax" : 5250,
+	  "insurance" : 3144,
+		"maintenance" : 863,
+		"tires" : 1172
+	}
+}

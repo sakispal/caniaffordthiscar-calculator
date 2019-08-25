@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 "> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+
+    <title>Can You Afford Your Dream Car? - Car Affordability Calculator</title>
+    <!-- Google console tag -->
+    <meta name="google-site-verification" content="4HpXI7Bdbn3TjtDAEx6M-Rl56VWcHwsQHajvWEzgvLo" />
+    <!-- SEO TAG -->
+    <meta name = "description" content = "Submit a simple, free form and you will get the true annual or monthly cost of owning and running your dream car. All running costs taken into account.">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="">
+
+    <!-- FONTS -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Quicksand:100,300,400,400italic,500,700,700italic'>
+
+    <!-- CSS -->
+    <link rel='stylesheet' href='css/global.css'>
+    <link rel='stylesheet' href='css/structure.css'>
+    <link rel='stylesheet' href='css/pay.css'>
+    <link rel='stylesheet' href='css/custom.css'>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106874173-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-106874173-1');
+    </script>
+
+    <!-- CONFIGURATION FOR SOCKET.IO -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+    var socket = io();
+    </script>  
+
+    <!-- Begin Inspectlet Asynchronous Code -->
+    <script type="text/javascript">
+    (function() {
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 24152349]);
+    var ldinsp = function(){
+    if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=24152349&r=' + Math.floor(new Date().getTime()/3600000); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+    setTimeout(ldinsp, 0);
+    })();
+    </script>
+    <!-- End Inspectlet Asynchronous Code -->
+
+
+
+</head>
+
+
+<body class="color-custom style-default button-default layout-full-width no-content-padding header-transparent minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menu-line-below-80 menuo-no-borders menuo-right mobile-tb-hide mobile-side-slide mobile-mini-mr-ll tr-content be-reg-2074">
+    <div id="Wrapper">
+        <div id="Header_wrapper">
+            <header id="Header">
+                <div class="header_placeholder"></div>
+                <div id="Top_bar">
+                    <div class="container">
+                        <div class="column one">
+                            <div class="top_bar_left clearfix">
+                                <div class="logo">
+                                   <a href="/"><img class = "logo" src="https://res.cloudinary.com/dyguqwsrq/image/upload/c_scale,e_negate,w_250/v1535198353/Logos/logo.png" alt="logo"/></a>
+                                </div>
+                                <div class="menu_wrapper">
+                                    <nav id="menu">
+                                        <ul id="menu-main-menu" class="menu menu-main">
+                                            <li>
+                                                <a href="/howitworks" class=""><span>How It Works</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="/about" class=""><span>About Us</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="/privacy" class=""> <span>Privacy/Cookie Policy</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="/contact"><span>Contact</span></a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <a class="responsive-menu-toggle" href="#"><i class="icon-menu-fine"></i></a>
+                                </div>
+                            </div>
+
+                            
+                            
+                        <!--     <div class="top_bar_right">
+                                <div class="top_bar_right_wrapper">
+                                    <a href="http://bit.ly/1M6lijQ" class="button button_theme button_js action_button" target="_blank"><span class="button_label">Buy now</span></a>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div id="Content">
+            <div class="content_wrapper clearfix">
+                <div class="sections_group">
+                    <div class="entry-content">
+                        <div class="section mcb-section bg-cover-ultrawide" style="padding-top:160px; padding-bottom:0px; background-image:url(content/pay/images/home_pay_sectionbg1.png); background-repeat:no-repeat; background-position:center bottom">
+                            <div class="section_wrapper mcb-section-inner">
+                                <div class="wrap mcb-wrap one valign-top clearfix">
+                                 <!--    <div class = "column one-fourth ">
+                                        <img src="https://res.cloudinary.com/dyguqwsrq/image/upload/v1535198647/Car%20backgrounds/background3.jpg">
+                                    </div> -->
+
+                                    <!-- FORM START-->
+                                    <div class = "column one-second center-col">
+                                        <div class="contact-div header-contact-form header-contact-bg">
+                                            <form class="contact-form" name="car" method="POST" action="/">
+                                                <div class="clearfix">
+                                                    <div class="header-form-heading-bg">
+                                                        <h4 class="center" id = "form-title"><span id = "typewriter">Select Your Desired Car</span></h4>
+                                                    </div>
+                                                    <div class="header-contact-bg-pad">
+                                                        <!-- <p class="left header-form-text ls">Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam pharetra efficitur diam</p> -->
+
+                                                        <!--================= DROPDOWN INPUTS =========================-->
+
+                                                        <div id = "dropdown">
+                                                            <div id = "make">
+                                                                <label>Select Make</label>
+                                                                <select id = "makedropdown" name = "make" class = "dropdown">
+                                                                    <option value = ""></option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div id = "model">
+                                                                <label>Select Model</label>
+                                                                <select id = "modeldropdown" name = "model" class = "dropdown">
+                                                                    <option value = ""></option>
+                                                                </select>
+                                                            </div>
+                                                            
+                                                            <div id = "year">
+                                                                <label>Select Year</label>
+                                                                <select id = "yeardropdown" name = "year" class = "dropdown">
+                                                                    <option value = ""></option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- INCLUDE A SCRIPT THAT POPULATES THE MODEL AS SOON AS WE SELECT MAKE -->
+                                                        <script type="text/javascript" src ="js/scripts/dropdownBuilder.js"></script>
+
+                                                        <!--================= MILEAGE INPUT BOX HERE =====================-->
+                                                        <div class="form-div form-bottom-1 first-form">
+                                                            <label>Estimated annual mileage</label>
+                                                            <input class="form-control form-text" id = "mileage" type="text" name="mileage" value="" placeholder="i.e. 7500"/>
+                                                        </div>
+
+                                                        <!--================= EMAIL INPUT BOX HERE ====================-->
+                                                        <!-- <div class="form-div form-bottom-1">
+                                                            <label>Please enter email to receive your query</label>
+                                                            <label class = "">What is your e-mail address?</label>
+                                                            <input class="form-control form-text" type="email" name="email" id = "email" value="" placeholder="(optional)" />
+                                                        </div> -->
+
+                                                        <!-- =============== For later, ambitious app ======================= -->
+                                                        <!-- <input class = "info" id = "zip" type="text" name="zip" placeholder="Zipcode"> -->
+                                                                                                <!-- <input class = "info" id = "age" type="text" name="age" placeholder="What is your age?"> -->
+
+                                                        <!--================= BUDGET INPUT BOX HERE ====================-->
+                                                        <div class="form-div form-bottom-1">
+                                                            <label>Please enter your $ budget</label>
+                                                            <input class="form-control form-text" type="text" name="budget" id = "budget" value="" placeholder=" i.e. 500" />
+                                                        </div>
+
+
+                                                        <!-- ================== Select budget frequence ================== -->
+                                                         <div>
+                                                                <label>Is your budget monthly or annual?</label>
+                                                                <select id = "frequency-dropdown" name = "frequency" class = "">
+                                                                    <option value = "monthly">Monthly</option>
+                                                                    <option value = "annual">Annual</option>
+                                                                </select>
+                                                            </div>
+
+                                                        <!-- <p class="left note-text ls">*By clicking submit you agree to us sending you an e-mail to ask how we can improve our service</p> -->
+
+                                                        <!--============= SUCESSS AND FAILURE MESSAGE DISPLAY HERE ========-->
+                                                        <div class="left form-error-top"> <span class="form-success sucessMessage"> </span> <span class="form-failure failMessage"> </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--================= SUBMIT BUTTON HERE ====================-->
+                                                    <div>
+                                                        <input type="submit" class="submit-btn contact-form-submit" name="submit" value="Get the cost for FREE">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <!-- FORM END -->
+                                    <div class="column mcb-column one column_image">
+                                        <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
+                                            <!-- <div class="image_wrapper">
+                                            	<img class="scale-with-grid" src="content/pay/images/home_pay_pic1.png">
+                                            </div> -->
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="section mcb-section" style="padding-top:0px; padding-bottom:0px; background-image:url(content/pay/images/home_pay_sectionbg2.png); background-repeat:no-repeat; background-position:center">
+                            <div class="section_wrapper mcb-section-inner">
+                                <div class="wrap mcb-wrap one valign-top clearfix">
+                                    <div class="mcb-wrap-inner">
+                                        <div class="column mcb-column one-third column_column  column-margin-20px">
+                                            <div class="column_attr clearfix" id = "h2-title">
+                                                <h2>Car <span class="themecolor">Affordability</span> Calculator</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wrap mcb-wrap one-third valign-top clearfix">
+                                    <div class="mcb-wrap-inner">
+                                        <div class="column mcb-column one column_column column-margin-20px">
+                                            <div class="column_attr clearfix">
+                                                <h4>Finding out how much a car is going to cost you to buy and run is no easy task.</h4>
+                                                <p>
+                                                    Sure, you can easily find the price. But what about the other costs?
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="column mcb-column one column_button">
+                                            <a class="button  button_right button_size_2 button_js" href="/howitworks"><span class="button_icon"><i class="icon-menu" ></i></span><span class="button_label">Learn more</span></a>
+                                        </div>
+                                        <div class="column mcb-column one column_divider ">
+                                            <hr class="no_line" style="margin:0 auto 20px">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wrap mcb-wrap two-third valign-top clearfix" style="padding:0 0 0 5%">
+                                    <div class="mcb-wrap-inner">
+                                        <div class="column mcb-column one-third column_column">
+                                            <div class="column_attr clearfix explanation-icons" style="background-image:url('https://png.icons8.com/ultraviolet/80/000000/tire.png'); ">
+                                                <h6 class="themecolor" style="margin-bottom: 2px;">01 —</h6>
+                                                <h5>Tyres</h5>
+                                            </div>
+                                        </div>
+                                        <div class="column mcb-column one-third column_column">
+                                            <div class="column_attr clearfix explanation-icons" style="background-image:url('https://png.icons8.com/cotton/64/000000/gas-station.png'); ">
+                                                <h6 class="themecolor" style="margin-bottom: 2px;">02 —</h6>
+                                                <h5>Gas</h5>
+                                            </div>
+                                        </div>
+                                        <div class="column mcb-column one-third column_column">
+                                            <div class="column_attr clearfix explanation-icons" style="background-image:url('https://png.icons8.com/ultraviolet/80/000000/maintenance.png'); ">
+                                                <h6 class="themecolor" style="margin-bottom: 2px;">03 —</h6>
+                                                <h5>Service and maintenance</h5>
+                                            </div>
+                                        </div>
+                                        <div class="column mcb-column one column_divider ">
+                                            <hr class="no_line">
+                                        </div>
+                                        <div class="column mcb-column one-third column_column">
+                                            <div class="column_attr clearfix explanation-icons" style="background-image:url('https://png.icons8.com/ultraviolet/80/000000/vehicle-security.png')">
+                                                <h6 class="themecolor" style="margin-bottom: 2px;">04 —</h6>
+                                                <h5>Insurance</h5>
+                                            </div>
+                                        </div>
+                                        <div class="column mcb-column one-third column_column">
+                                            <div class="column_attr clearfix explanation-icons" style="background-image:url('https://png.icons8.com/cotton/80/000000/tax.png'); ">
+                                                <h6 class="themecolor" style="margin-bottom: 2px;">05 —</h6>
+                                                <h5>State tax</h5>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="column mcb-column one-third column_column">
+                                            <div class="column_attr clearfix" style="background-image:url('content/pay/images/home_pay_pic7.png'); background-repeat:no-repeat; background-position:left top; padding:0 0 0 80px;">
+                                                <h6 class="themecolor" style="margin-bottom: 2px;">06 —</h6>
+                                                <h5>Areas</h5>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <!-- social media -->
+                        <div class="section mcb-section" style="padding-top:80px; padding-bottom:30px; background-color:#0b0f2f; background-image:url(images/home_pay_sectionbg3.png); background-repeat:no-repeat; background-position:center bottom; ">
+                            <div class="section_wrapper mcb-section-inner">
+                                <div class="wrap mcb-wrap one valign-top clearfix">
+                                    <div class="mcb-wrap-inner">
+                                        <div class="column mcb-column one column_column">
+                                            <div class="column_attr clearfix align_center">
+                                                <h2>Follow us on social media</h2>
+                                                <h5 style="color:#aeb0f3"></h5>
+                                                <hr class="no_line" style="margin:0 auto 25px">
+                                                <a class="button  button_right button_size_2 button_js" href="https://www.facebook.com/caniaffordthiscar/" style="background-color:#4351a5 !important; color:#fff;"><span class="button_icon"><i class="icon-facebook"  style=" color:#fff !important;"></i></span><span class="button_label">Facebook</span></a>
+                                                <a
+                                                    class="button  button_right button_size_2 button_js" href="https://twitter.com/CanIAffordThis1" style="background-color:#4dd1f1 !important; color:#fff;"><span class="button_icon"><i class="icon-twitter"  style=" color:#fff !important;"></i></span><span class="button_label">Twitter</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--  wrapper div -->
+        </div>
+        <footer id="Footer" class="clearfix">
+            <div class="footer_copy">
+                <div class="container">
+                    <div class="column one">
+                        <a id="back_to_top" class="button button_js" href="#"><i class="icon-up-open-big"></i></a>
+                        <div class="copyright">
+                            <p>Our service is free and we do not place any cookies on your browser </p>
+                            <p>© 2018 Copyright:<a href="https://caniaffordthiscar.com"> Can I Afford This Car</a></p>
+                        </div>
+                        <nav id="social-menu" class="menu-main-menu-footer-container">
+                            <ul id="menu-main-menu-footer" class="social-menu">
+                                <li>
+                                    <a href="/about" class=""><span>About Us</span></a>
+                                </li>
+                                <li>
+                                    <a href="/howitworks" class=""><span>How It Works</span></a>
+                                </li>
+                                <li>
+                                    <a href="/privacy" class=""> <span>Privacy Policy</span></a>
+                                </li>
+                                <li>
+                                    <a href="/contact"><span>Contact</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- side menu -->
+    <div id="Side_slide" class="right dark" data-width="250">
+        <div class="close-wrapper">
+            <a href="#" class="close"><i class="icon-cancel-fine"></i></a>
+        </div>
+        <div class="extras">
+            <!-- <a href="http://bit.ly/1M6lijQ" class="button button_theme button_js action_button" target="_blank"><span class="button_label">Buy now</span></a> -->
+            <div class="extras-wrapper"></div>
+        </div>
+        <div class="menu_wrapper"></div>
+    </div>
+    <div id="body_overlay"></div>
+
+    <!-- JS -->
+    <script
+                  src="https://code.jquery.com/jquery-2.2.4.min.js"
+                  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+                  crossorigin="anonymous"></script>
+    <!-- Custom typewriter script -->
+<!--     <script type="text/javascript" src = "js/scripts/typewriter.js"></script> -->
+
+</body>
+
+</html>
