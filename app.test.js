@@ -1,11 +1,9 @@
 const expect = require('expect');
 const request = require('supertest');
-const mongoose = require('mongoose');
-
 const {app} = require('./app');
 const User = require('./models/userSchema');
+const {mongoose} = require("./config/mongoose");
 
-mongoose.connect(process.env.LIVE_DB_URL);
 
 const user = {
 	working : [
@@ -166,11 +164,14 @@ describe('POST /', function (){
 		});	
 	});
 	
-	it('should fail with undefined budget', (done) => {
+	it('should return a listing but with undefined outcome with undefined budget', (done) => {
 		request(app)
 		.post('/')
 		.send(user.noBudget)
-		.expect(400)
+		.expect(200)
+		.expect((res)=>{
+			expect(res.body.outcome.comparison).toBe('unspecified');
+		})
 		.end((err,res) =>{
 			if (err){
 				return done(err);

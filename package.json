@@ -4,7 +4,9 @@
   "description": "Car affordability calculator",
   "main": "app.js",
   "scripts": {
-    "test": "export TEST=true; mocha ./*.test.js",
+    "test": "export TEST=true; export NODE_ENV=production; mocha ./*.test.js",
+    "test-dev" : "export TEST=true; export NODE_ENV=development; mocha ./*.test.js",
+    "test-localdb" : "export TEST=true; export NODE_ENV=localdb; mocha ./*.test.js",
     "test-watch": "nodemon --exec 'npm test'",
     "start": "export NODE_ENV=production; node app.js",
     "dev": "export NODE_ENV=development; node app.js",
@@ -24,13 +26,13 @@
     "express-sanitizer": "^1.0.4",
     "file-system": "^2.2.2",
     "helmet": "^3.13.0",
-    "mongoose": "^5.1.2",
+    "mongoose": "^5.6.10",
     "nodemailer": "^4.6.7",
     "request": "^2.88.0",
     "socket.io": "^2.2.0",
     "supertest": "^3.3.0",
     "typed.js": "^2.0.6",
-    "x-ray": "^2.3.3"
+    "x-ray": "^2.3.4"
   },
   "devDependencies": {
     "expect": "^23.6.0",

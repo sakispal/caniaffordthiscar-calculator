@@ -9,7 +9,7 @@ const Car = require('../models/carSchema');
 const pullDataService = new PullDataService();
 
 
-mongoose.connect("mongodb://localhost/caniaffordthiscar");
+mongoose.connect(process.env.LOCAL_DB_URL);
 
 var userFail = {
     "make": "BMW",

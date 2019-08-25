@@ -1,37 +1,30 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-//CONFIGURE MONGOOSE
 //IF ELSE STATEMENT to evaluate whether we are in production or live
 if (process.env.NODE_ENV === "development"){
 	//If we are in development, use the local database
-	mongoose.connect(process.env.LIVE_DB_URL, { useNewUrlParser: true }, (err, res)=>{
-		if (err){
-			console.log('Mongoose failed to connect ' + err);
-		} else {
-			console.log("We are in development" + res);			
-		}
-	});
-
-} else if (process.env.NODE_ENV === "production"){
+	var url = process.env.LOCAL_DB_URL;
+	var mode = 'development';
+} else if (process.env.NODE_ENV === "production" || process.env.TEST === true){
 	//If we are in production, use the mongolab db
-	mongoose.connect(process.env.LIVE_DB_URL, { useNewUrlParser: true }, (err, res)=>{
-		if (err){
-			console.log('Mongoose failed to connect ' + err);
-		} else {
-			console.log("We are in production" + res);
-		}
-	});
+	var url = process.env.LIVE_DB_URL;
+	var mode = 'production'
 } else if (process.env.NODE_ENV === "localdb"){
-	mongoose.connect(process.env.LOCAL_DB_URL, { useNewUrlParser: true }, (err, res)=>{
-		if (err){
-			console.log('Mongoose failed to connect ' + err);
-		} else {
-			console.log("We are in local db development" + res);
-		}
-	});
+	var url = process.env.ATLAS_DB_URL;
+	var mode = 'localdbtesting'
 }
+//connect
+mongoose.connect(url, { useNewUrlParser: true })
+.then((res)=>{
+	console.log(`We are in ${mode} and connected with object ${res}`);
+})
+.catch((err)=>{
+	console.log('Mongoose failed to connect ' + err);
+});
 
-
+mongoose.connection.on('error', err => {
+  console.log('After intial connection we had error ' + err);
+});
 
 module.exports = {mongoose}

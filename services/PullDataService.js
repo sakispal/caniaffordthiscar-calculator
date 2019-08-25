@@ -109,6 +109,10 @@ method.fullListing = async function(user){
 
 method.getResultsFromDatabase = (user) =>{
 	return new Promise((resolve, reject) =>{
+		if (!user.make || !user.model){
+			reject('User has not provided the exact make or model');
+		}
+
 		Car.find({
 			make : user.make,
 			model : user.model,
