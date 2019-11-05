@@ -26,7 +26,7 @@
     "express-sanitizer": "^1.0.4",
     "file-system": "^2.2.2",
     "helmet": "^3.13.0",
-    "mongoose": "^5.6.10",
+    "mongoose": "^5.7.5",
     "nodemailer": "^4.6.7",
     "request": "^2.88.0",
     "socket.io": "^2.2.0",
