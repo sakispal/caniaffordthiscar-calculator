@@ -29,7 +29,7 @@
     "mongoose": "^5.7.5",
     "nodemailer": "^4.6.7",
     "request": "^2.88.0",
-    "socket.io": "^2.2.0",
+    "socket.io": "^2.4.0",
     "supertest": "^3.3.0",
     "typed.js": "^2.0.6",
     "x-ray": "^2.3.4"
